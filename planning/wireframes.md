@@ -9,7 +9,7 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 ## Wireframe 1: Register/login pages
 <img width="253" alt="image" src="https://github.com/joshhn/web103_finalproject/assets/98563266/b5bbb4ae-8cbb-4544-a61a-8fc6e1e10f4d">
 This is the register page in which when the user wants to register for our website they need to make an account to register
-![image](https://github.com/joshhn/web103_finalproject/assets/98563266/239ed4be-9595-4e5d-9deb-02700f8a84b7)
+![image](https://github.com/joshhn/web103_finalproject/assets/98563266/ac73b567-d916-4445-ae90-3eafe28e83b1)
 This is the login page which when the user registers an account they can use that to log in with it. Users who are logged in are able to perform tasks such as creating recipes, commenting, and adding recipes to their collection.
 
 ## Wireframe 2:Homepage
