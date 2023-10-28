@@ -15,3 +15,5 @@ Reference the Creating an Entity Relationship Diagram final project guide in the
 | id | integer | primary key |
 | name | text | name of the shoe model |
 | ... | ... | ... |
+
+![image](./Entity%20Ralational%20Diagram.jpg)
