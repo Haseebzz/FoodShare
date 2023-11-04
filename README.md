@@ -40,7 +40,7 @@ Another feature would be to allow users to have the ability to comment on any re
 
 [gif goes here]
 
-### Favoriting recipes
+### Creating Collections and Adding recipes to collections
 
 Another feature would be to allow users to have the ability to favorite a specific recipe they want which would be added to their favorites list which they can view. They can also delete a recipe from their favorites list. 
 
