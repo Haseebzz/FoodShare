@@ -9,7 +9,7 @@ app.use('/recipes', recipeRoutes)
 app.get('/', (req, res) => {
   res.status(200).send('<h1 style="text-align: center; margin-top: 50px;">FoodShare</h1>')
 })
-
+console.log("hello world")
 const PORT = process.env.PORT || 3001
 
 app.listen(PORT, () => {
