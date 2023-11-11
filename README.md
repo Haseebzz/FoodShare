@@ -27,18 +27,30 @@ Database: PostgreSQL
 
 ## Features
 
-### User-Generated Recipe Sharing(crud)
+### ✅ User-Generated Recipe Sharing(crud)
 
 One feature in our app will allow users to create their own recipes which would be viewed by everyone, delete their recipes, and update their recipes.
 
-[gif goes here]
+https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
 
-### Recipe commenting(crud)
-
+### ✅ Recipe commenting(crud)
 
 Another feature would be to allow users to have the ability to comment on any recipe they choose which will also be viewed by others. They can also delete their own comments as well as update.
 
-[gif goes here]
+https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
+
+### ✅ Recipe Search
+Our app will have a search search functionality for users to find recipes by name.
+
+https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
+
+### ✅ Recipe filtering
+Our app will contain a filtering option in which a user can filter a recipe by its category and recipes based on that category will then display
+
+https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
+
+
+### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
 
 ### Creating Collections and Adding recipes to collections
 
@@ -46,16 +58,12 @@ Another feature would be to allow users to have the ability to favorite a specif
 
 [gif goes here]
 
-### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
 
- ### Recipe Search
- Our app will have a search search functionality for users to find recipes by name.
+### ✅ user authentication
+We are thinking of implementing some sort of user authentication within our app.
 
- ### Recipe filtering
- Our app will contain a filtering option in which a user can filter a recipe by its category and recipes based on that category will then display
+https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
 
- ### user authentication
- We are thinking of implementing some sort of user authentication within our app.
 ## Installation Instructions
 
 Clone the Repository:
