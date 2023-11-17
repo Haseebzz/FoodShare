@@ -49,7 +49,7 @@ const EditPage = () => {
 
     try {
       // Send the updated recipe data to your backend API for editing
-      const response = await fetch(`http://localhost:3001/recipes/${id}`, {
+      const response = await fetch(`https://web103-finalproject.vercel.app/recipes/${id}`, {
         method: 'PUT', // Use the appropriate HTTP method (e.g., PUT) for editing
         headers: {
           'Content-Type': 'application/json',
