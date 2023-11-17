@@ -11,7 +11,7 @@ const RegisterPage = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch('https://foodshare-f5xd0ahh2-haseebzz.vercel.app/auth/register', {
+      const response = await fetch('https://web103-finalproject.vercel.app/auth/register', {
         method: 'POST',
         body: JSON.stringify(formData), // Sending registration data as JSON
         headers: {
