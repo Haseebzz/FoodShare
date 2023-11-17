@@ -11,7 +11,7 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try{
-        const result = await axios.post('https://foodshare-f5xd0ahh2-haseebzz.vercel.app/auth/login', {
+        const result = await axios.post('https://web103-finalproject.vercel.app/auth/login', {
             username,
             password
         })
