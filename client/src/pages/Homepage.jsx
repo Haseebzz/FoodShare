@@ -12,7 +12,7 @@ const Homepage = () => {
   const [recipesPerPage] = useState(8); // Adjust the number of recipes per page as needed
   useEffect(() => {
     // Fetch car combinations data from your API
-    fetch('http://localhost:3001/recipes')
+    fetch('https://web103-finalproject.vercel.app/recipes')
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
@@ -35,7 +35,7 @@ const Homepage = () => {
     } else {
       setSelectedCategory(category);
       // Fetch recipes for the selected category
-      fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/filter/${category}`)
+      fetch(`https://web103-finalproject.vercel.app/recipes/filter/${category}`)
         .then((response) => response.json())
         .then((data) => {
           if (Array.isArray(data)) {
@@ -53,7 +53,7 @@ const Homepage = () => {
   };
   
   const fetchRecipes = () => {
-    fetch('http://localhost:3001/recipes')
+    fetch('https://web103-finalproject.vercel.app/recipes')
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
@@ -65,7 +65,7 @@ const Homepage = () => {
   const handleDelete = async (id) => {
     try {
       // Send the recipe data to your backend API for creation.
-      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/${id}`, {
+      const response = await fetch(`https://web103-finalproject.vercel.app/recipes/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const Homepage = () => {
 
   const handleSearch = () => {
     // Fetch recipes based on the search query
-    fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/search?name=${searchQuery}`)
+    fetch(`https://web103-finalproject.vercel.app/recipes/search?name=${searchQuery}`)
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
