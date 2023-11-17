@@ -28,7 +28,7 @@ const EditPage = () => {
     // Fetch the recipe data for editing
     const fetchRecipeForEdit = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/recipes/${id}`);
+        const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/${id}`);
         if (response.ok) {
           const data = await response.json();
           setRecipe(data);
