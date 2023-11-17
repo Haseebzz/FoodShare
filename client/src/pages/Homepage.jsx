@@ -35,7 +35,7 @@ const Homepage = () => {
     } else {
       setSelectedCategory(category);
       // Fetch recipes for the selected category
-      fetch(`http://localhost:3001/recipes/filter/${category}`)
+      fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/filter/${category}`)
         .then((response) => response.json())
         .then((data) => {
           if (Array.isArray(data)) {
@@ -65,7 +65,7 @@ const Homepage = () => {
   const handleDelete = async (id) => {
     try {
       // Send the recipe data to your backend API for creation.
-      const response = await fetch(`http://localhost:3001/recipes/${id}`, {
+      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const Homepage = () => {
 
   const handleSearch = () => {
     // Fetch recipes based on the search query
-    fetch(`http://localhost:3001/recipes/search?name=${searchQuery}`)
+    fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/search?name=${searchQuery}`)
       .then((response) => response.json())
       .then((data) => {
         setRecipes(data);
