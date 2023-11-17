@@ -54,10 +54,10 @@ https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
 
 ### ✅ Creating Collections and Adding recipes to collections
 
-Another feature would be to allow users to have the ability to favorite a specific recipe they want which would be added to their favorites list which they can view. They can also delete a recipe from their favorites list. 
+Another feature would be to allow users to have the ability to create as many collections as they want which they can insert as many recipes they want into a collection making this the many-to-many relationship. Users can also delete a specific collection
 
 [gif goes here]
-
+https://www.loom.com/share/9b35abbcf8ec4355848ee55970e89ecf?sid=a9c26ad0-36f9-44d9-afdf-876932c38d41
 
 ### ✅ user authentication
 We are thinking of implementing some sort of user authentication within our app.
