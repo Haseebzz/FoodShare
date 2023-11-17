@@ -64,12 +64,25 @@ const editRecipe = async (req, res) => {
 };
 
 
-// Delete a recipe
 const deleteRecipe = async (req, res) => {
   const recipeId = req.params.id;
 
   try {
-    // Delete the recipe from the recipes table
+    // Delete references to the recipe in collection_recipes table
+    const deleteCollectionRecipesQuery = `
+      DELETE FROM collection_recipes
+      WHERE recipe_id = $1;
+    `;
+    await pool.query(deleteCollectionRecipesQuery, [recipeId]);
+
+    // Delete references to the recipe in comments table
+    const deleteCommentsQuery = `
+      DELETE FROM comments
+      WHERE recipe_id = $1;
+    `;
+    await pool.query(deleteCommentsQuery, [recipeId]);
+
+    // Now that references in collection_recipes and comments are deleted, delete the recipe
     const deleteRecipeQuery = `
       DELETE FROM recipes
       WHERE id = $1
@@ -87,6 +100,8 @@ const deleteRecipe = async (req, res) => {
     res.status(500).json({ error: 'An error occurred while deleting the recipe.' });
   }
 };
+
+
 
 // Get a single recipe by ID
 const getRecipeById = async (req, res) => {
