@@ -16,7 +16,7 @@ const RecipeInfoPage = () => {
     // Fetch the recipe data when the component mounts
     const fetchRecipe = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/recipes/${id}`);
+        const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/${id}`);
         if (response.ok) {
           const data = await response.json();
           setRecipe(data);
@@ -30,7 +30,7 @@ const RecipeInfoPage = () => {
     };
     const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/comments/${id}`);
+        const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/comments/${id}`);
         if (response.ok) {
           const data = await response.json();
           setComments(data);
@@ -48,7 +48,7 @@ const RecipeInfoPage = () => {
   const handleAddComment = async () => {
     // Make a POST request to add a new comment
     try {
-      const response = await fetch('http://localhost:3001/comments', {
+      const response = await fetch('https://foodshare-f5xd0ahh2-haseebzz.vercel.app/comments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const RecipeInfoPage = () => {
         
     try {
       // Send the recipe data to your backend API for creation.
-      const response = await fetch(`http://localhost:3001/recipes/${id}`, {
+      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const RecipeInfoPage = () => {
         
     try {
       // Send the recipe data to your backend API for creation.
-      const response = await fetch(`http://localhost:3001/recipes/${id}`, {
+      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ const RecipeInfoPage = () => {
   const handleDeleteComment = async (commentId) => {
     // Make a DELETE request to delete the comment
     try {
-      const response = await fetch(`http://localhost:3001/comments/${commentId}`, {
+      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/comments/${commentId}`, {
         method: 'DELETE',
       });
 
@@ -139,7 +139,7 @@ const RecipeInfoPage = () => {
   };
   const addRecipeToCollection = async (recipeId, collectionId) => {
     try {
-      const response = await fetch(`http://localhost:3001/collections/${collectionId}/${recipeId}`, {
+      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/collections/${collectionId}/${recipeId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -169,7 +169,7 @@ const RecipeInfoPage = () => {
   
   const handleAddToCollection = async (recipeId) => {
     try {
-      const response = await fetch(`http://localhost:3001/collections/${window.localStorage.userID}`);
+      const response = await fetch(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/collections/${window.localStorage.userID}`);
       if (response.ok) {
         const userCollections = await response.json();
         const collectionId = promptUserForCollection(userCollections); // Implement a function to prompt the user for collection selection
