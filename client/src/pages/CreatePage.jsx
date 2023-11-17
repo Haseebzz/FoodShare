@@ -34,7 +34,7 @@ const CreatePage = () => {
     
         try {
           // Send the recipe data to your backend API for creation.
-          const response = await fetch('https://foodshare-f5xd0ahh2-haseebzz.vercel.app/recipes', {
+          const response = await fetch('https://web103-finalproject.vercel.app/recipes', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
