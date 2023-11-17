@@ -9,6 +9,7 @@ const RecipeInfoPage = () => {
   const [recipe, setRecipe] = useState([]);
   const { id } = useParams(); // Use useParams to access route parameters
   const [cookies, setCookie] = useCookies(['access_token']);
+ 
   //console.log(id)
   const navigate = useNavigate()
   useEffect(() => {
@@ -136,9 +137,70 @@ const RecipeInfoPage = () => {
       console.error('Error deleting the comment:', error);
     }
   };
+  const addRecipeToCollection = async (recipeId, collectionId) => {
+    try {
+      const response = await fetch(`http://localhost:3001/collections/${collectionId}/${recipeId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        alert('Recipe added to collection successfully!');
+      } else {
+        alert('Recipe already added to this collection.');
+      }
+    } catch (error) {
+      console.error('Error adding recipe to collection:', error);
+    }
+  };
+  const promptUserForCollection = (userCollections) => {
+    const collectionId = prompt('Enter the Collection ID to add the recipe:');
+    const existingCollection = userCollections.find(collection => collection.id === parseInt(collectionId));
+    
+    if (!existingCollection) {
+      alert('This collection id belongs to someone else.');
+      return null;
+    }
+    
+    return collectionId;
+  };
+  
+  const handleAddToCollection = async (recipeId) => {
+    try {
+      const response = await fetch(`http://localhost:3001/collections/${window.localStorage.userID}`);
+      if (response.ok) {
+        const userCollections = await response.json();
+        const collectionId = promptUserForCollection(userCollections); // Implement a function to prompt the user for collection selection
+        if (collectionId !== null && collectionId.trim() !== '') {
+          addRecipeToCollection(recipeId, collectionId);
+        }
+      } else {
+        console.error('Error fetching user collections');
+        // Handle error fetching user collections
+      }
+    } catch (error) {
+      console.error('Error adding recipe to collection:', error);
+      // Handle error adding recipe to collection
+    }
+  };
   return (
     <div className="max-w-2xl mx-auto mt-8 p-4">
+    <div className='flex justify-around items-center'>
     <h1 className="text-3xl font-bold mb-4">{recipe.name}</h1>
+    {cookies.access_token ? (
+        <button
+          onClick={() => handleAddToCollection(recipe.id)}
+          className='bg-blue-800 text-white rounded-md font-medium w-[200px] py-2 hover:bg-blue-700 transition-colors duration-300'
+        >
+          Add to Collection
+        </button>
+      ) : (
+        // You can choose to display something else or nothing when the condition is not met
+        null
+      )}
+    </div>
     <p className="mb-4">{recipe.description}</p>
     <img src={recipe.image} alt={recipe.name} className="w-full h-auto mb-4" />
   
