@@ -70,7 +70,7 @@ Complete the checklist below detailing each baseline, custom, and stretch featur
 - [ ] 🍞 [Toast messages](https://www.patternfly.org/v3/pattern-library/communication/toast-notifications/index.html) deliver simple feedback in response to user events
 
 ## Final Demo GIF
-
+https://www.loom.com/share/a675aa5990174a8e8389885bd8040a20
 🔗 [Here's a GIF walkthrough of the final project](👉🏾👉🏾👉🏾 your link here)
 
 ## Reflection
