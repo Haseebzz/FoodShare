@@ -6,7 +6,7 @@ CodePath WEB103 Final Project
 Designed and developed by: Duy Huynh and Haseeb Chaudhury.
 
 🔗 Link to deployed app:
-
+https://web103-finalproject-t6zq.vercel.app/
 ## About
 
 ### Description and Purpose
