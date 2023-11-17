@@ -9,7 +9,7 @@ const CollectionsPage = () => {
   
   // Fetch collections by user ID
   useEffect(() => {
-    axios.get(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/collections/${userId}`)
+    axios.get(`https://web103-finalproject.vercel.app/collections/${userId}`)
       .then(response => {
         setCollections(response.data);
       })
@@ -23,7 +23,7 @@ const CollectionsPage = () => {
       const description = prompt('Enter collection description:');
       const userId = window.localStorage.userID; // Replace with your user ID
 
-      const response = await axios.post('https://foodshare-f5xd0ahh2-haseebzz.vercel.app/collections', {
+      const response = await axios.post('https://web103-finalproject.vercel.app/collections', {
         name,
         description,
         userId,
@@ -44,7 +44,7 @@ const CollectionsPage = () => {
 
   // Function to fetch recipes by collection ID
   const fetchRecipesByCollectionId = (collectionId) => {
-    axios.get(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/collections/recipe/${collectionId}`)
+    axios.get(`https://web103-finalproject.vercel.app/collections/recipe/${collectionId}`)
       .then(response => {
         setRecipes(response.data);
         console.log(response.data,collectionId)
@@ -56,7 +56,7 @@ const CollectionsPage = () => {
 
   const deleteCollection = async (collectionId) => {
     try {
-      const response = await axios.delete(`https://foodshare-f5xd0ahh2-haseebzz.vercel.app/collections/${collectionId}`);
+      const response = await axios.delete(`https://web103-finalproject.vercel.app/collections/${collectionId}`);
 
       if (response.status === 200) {
         // If deletion is successful, update the collections state by removing the deleted collection
