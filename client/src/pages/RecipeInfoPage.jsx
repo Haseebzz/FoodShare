@@ -58,7 +58,7 @@ const RecipeInfoPage = () => {
 
       if (response.ok) {
         // Reload the comments after adding a new comment
-        const response = await fetch(`http://localhost:3001/comments/${id}`);
+        const response = await fetch(`https://web103-finalproject.vercel.app/comments/${id}`);
         if (response.ok) {
           const data = await response.json();
           setComments(data);
