@@ -52,7 +52,7 @@ https://www.loom.com/share/99a0c1cc04494f42beac1603ac526810
 
 ### [ADDITIONAL FEATURES GO HERE - ADD ALL FEATURES HERE IN THE FORMAT ABOVE; you will check these off and add gifs as you complete them]
 
-### Creating Collections and Adding recipes to collections
+### ✅ Creating Collections and Adding recipes to collections
 
 Another feature would be to allow users to have the ability to favorite a specific recipe they want which would be added to their favorites list which they can view. They can also delete a recipe from their favorites list. 
 
